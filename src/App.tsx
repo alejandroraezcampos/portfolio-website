@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import Button from './components/Button';
+import './App.css';
+import { Link, Navbar } from './components';
+import styled from 'styled-components';
+
+const HEADER = styled.div`
+  margin: 41px 120px;
+  @media(max-width: 992px) {
+    margin: 0 20px;
+  }
+`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HEADER>
+         <Navbar></Navbar>
+    </HEADER>
   );
 }
 
